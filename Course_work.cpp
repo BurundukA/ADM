@@ -3,18 +3,25 @@
 
 #include <iostream>
 #include "Naive_algorythm.h"
+#include "Weisfeiler_Lehmann.h"
 
 int main() {
-    std::cout << "Choode algorythm:\n";
-    std::cout << "1.Naive_lgorythm\n";
+    std::cout << "Choose algorythm:\n";
+    std::cout << "1.Naive_algorythm\n";
+    std::cout << "2.Weisfeiler_Lehmann_algorythm\n";
     int choice;
     std::cin >> choice;
     if (choice == 1)
     {
         Naive_algorythm();
     }
+    if (choice == 2)
+    {
+        Weisfeiler_Lehmann();
+    }
     return 0;
 }
+
 
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
