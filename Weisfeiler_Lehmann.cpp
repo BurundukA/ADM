@@ -30,9 +30,9 @@ void GraphW::printGraph() const {
 }
 
 void GraphW::printVertexMatching(const std::unordered_map<int, int>& mapping) const {
-    std::cout << "Vertex Matching: " << std::endl;
+    std::cout << "Vertex Matching:\n ";
     for (const auto& pair : mapping) {
-        std::cout << pair.first << " -> " << pair.second << std::endl;
+        std::cout << pair.first << " -> " << pair.second << "\n";
     }
 }
 
@@ -112,16 +112,16 @@ void Weisfeiler_Lehmann()
         GraphW g1 = generateRandomGraph();
         GraphW g2 = generateRandomGraph();
 
-        std::cout << "Graph 1:" << std::endl;
+        std::cout << "Graph 1:\n";
         g1.printGraph();
         std::cout << std::endl;
 
-        std::cout << "Graph 2:" << std::endl;
+        std::cout << "Graph 2\n:";
         g2.printGraph();
-        std::cout << std::endl;
+        std::cout << "\n";
 
         if (g1.isIsomorphic(g2)) {
-            std::cout << "Graphs are isomorphic." << std::endl;
+            std::cout << "Graphs are isomorphic.\n";
             std::unordered_map<int, int> matching;
             for (int i = 0; i < g1.getV(); i++) {
                 matching[i] = i;
@@ -130,7 +130,7 @@ void Weisfeiler_Lehmann()
             g1.printVertexMatching(matching);
         }
         else {
-            std::cout << "Graphs are not isomorphic." << std::endl;
+            std::cout << "Graphs are not isomorphic.\n";
         }
     }
 
@@ -147,16 +147,16 @@ void Weisfeiler_Lehmann()
         g2.addEdge(3, 0);
         g2.addEdge(2, 1);
 
-        std::cout << "Graph 1:" << std::endl;
+        std::cout << "Graph 1:\n";
         g1.printGraph();
         std::cout << std::endl;
 
-        std::cout << "Graph 2:" << std::endl;
+        std::cout << "Graph 2:\n" << std::endl;
         g2.printGraph();
         std::cout << std::endl;
 
         if (g1.isIsomorphic(g2)) {
-            std::cout << "Graphs are isomorphic." << std::endl;
+            std::cout << "Graphs are isomorphic.\n";
 
             std::unordered_map<int, int> mapping;
             for (int i = 0; i < g1.getV(); i++) {
@@ -166,7 +166,7 @@ void Weisfeiler_Lehmann()
             g1.printVertexMatching(mapping);
         }
         else {
-            std::cout << "Graphs are not isomorphic." << std::endl;
+            std::cout << "Graphs are not isomorphic.\n";
         }
     }
     if (choice == 3)
@@ -182,16 +182,16 @@ void Weisfeiler_Lehmann()
         g2.addEdge(0, 2);
         g2.addEdge(0, 3);
 
-        std::cout << "Graph 1:" << std::endl;
+        std::cout << "Graph 1:\n";
         g1.printGraph();
-        std::cout << std::endl;
+        std::cout << "\n";
 
-        std::cout << "Graph 2:" << std::endl;
+        std::cout << "Graph 2:\n";
         g2.printGraph();
-        std::cout << std::endl;
+        std::cout << "\n";
 
         if (g1.isIsomorphic(g2)) {
-            std::cout << "Graphs are isomorphic." << std::endl;
+            std::cout << "Graphs are isomorphic.\n";
 
             std::unordered_map<int, int> mapping;
             for (int i = 0; i < g1.getV(); i++) {
@@ -201,7 +201,7 @@ void Weisfeiler_Lehmann()
             g1.printVertexMatching(mapping);
         }
         else {
-            std::cout << "Graphs are not isomorphic." << std::endl;
+            std::cout << "Graphs are not isomorphic.\n";
         }
     }
 }

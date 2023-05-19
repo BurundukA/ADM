@@ -4,11 +4,13 @@
 #include <iostream>
 #include "Naive_algorythm.h"
 #include "Weisfeiler_Lehmann.h"
+#include "Nauty.h"
 
 int main() {
     std::cout << "Choose algorythm:\n";
     std::cout << "1.Naive_algorythm\n";
     std::cout << "2.Weisfeiler_Lehmann_algorythm\n";
+    std::cout << "3.Nauty\n";
     int choice;
     std::cin >> choice;
     if (choice == 1)
@@ -18,6 +20,10 @@ int main() {
     if (choice == 2)
     {
         Weisfeiler_Lehmann();
+    }
+    if (choice == 3)
+    {
+        Nauty();
     }
     return 0;
 }
