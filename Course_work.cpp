@@ -5,12 +5,14 @@
 #include "Naive_algorythm.h"
 #include "Weisfeiler_Lehmann.h"
 #include "Nauty.h"
+#include "Bliss.h"
 
 int main() {
     std::cout << "Choose algorythm:\n";
     std::cout << "1.Naive_algorythm\n";
     std::cout << "2.Weisfeiler_Lehmann_algorythm\n";
     std::cout << "3.Nauty\n";
+    std::cout << "4.Bliss\n";
     int choice;
     std::cin >> choice;
     if (choice == 1)
@@ -24,6 +26,10 @@ int main() {
     if (choice == 3)
     {
         Nauty();
+    }
+    if (choice == 4)
+    {
+        Bliss();
     }
     return 0;
 }
