@@ -6,6 +6,7 @@
 #include "Weisfeiler_Lehmann.h"
 #include "Nauty.h"
 #include "Bliss.h"
+#include "VF2.h"
 
 int main() {
     std::cout << "Choose algorythm:\n";
@@ -13,6 +14,7 @@ int main() {
     std::cout << "2.Weisfeiler_Lehmann_algorythm\n";
     std::cout << "3.Nauty\n";
     std::cout << "4.Bliss\n";
+    std::cout << "5.VF2\n";
     int choice;
     std::cin >> choice;
     if (choice == 1)
@@ -30,6 +32,10 @@ int main() {
     if (choice == 4)
     {
         Bliss();
+    }
+    if (choice == 5)
+    {
+        VF2();
     }
     return 0;
 }
